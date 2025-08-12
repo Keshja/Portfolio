@@ -29,7 +29,7 @@
             width: (500/16rem);
             /* make really long so it covers the whole screen all the way to desktop */
             height: (4000/16rem);
-            background: #fff;
+            background: var(--background);
             opacity: 1;
             transform: rotate(-67deg);
             transform-origin: center;
@@ -46,7 +46,7 @@
             content: "";
             width: (500/16rem);
             height: (4000/16rem);
-            background: #fff;
+            background: var(--background);
             opacity: 1;
             transform: rotate(67deg);
             transform-origin: center;
@@ -108,7 +108,7 @@
             max-width: (829/16rem);
             /* 16px - 24px */
             margin: 0 auto clamp(1rem, 4vw, 1.5rem);
-            color: #fff;
+            color: var(--bodyTextColorWhite);
             position: relative;
 
             &:after {
@@ -138,7 +138,7 @@
             margin: 0 auto;
             /* 40px - 48px */
             margin-bottom: clamp(2.5rem, 4vw, 3rem);
-            color: #fff;
+            color: var(--bodyTextColorWhite);
         }
     }
 }
@@ -240,24 +240,6 @@
                 width: clamp(2.75rem, 5.8vw, 3.25rem);
                 height: auto;
             }
-        }
-
-        .cs-title {
-            font-size: (20/16rem);
-            line-height: 1.2em;
-            text-transform: uppercase;
-            text-align: center;
-            margin: 0 auto (8/16rem);
-            color: var(--headerColor);
-        }
-
-        .cs-text {
-            font-size: (16/16rem);
-            text-align: center;
-            line-height: 1.5em;
-            max-width: (360/16rem);
-            margin: 0 auto;
-            color: var(--bodyTextColor);
         }
     }
 }

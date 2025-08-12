@@ -13,13 +13,15 @@
 @media only screen and (min-width: 0rem) {
     /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     :root {
-        --primary: #ff6a3e;
-        --primaryLight: #ffba43;
-        --secondary: #ffba43;
-        --secondaryLight: #ffba43;
+        --background: #141315;
+        --primary: #847098;
+        --primaryLight: #c0b2ce;
+        --secondary: #c0b2ce;
+        --secondaryLight: #c0b2ce;
         --headerColor: #1a1a1a;
-        --bodyTextColor: #4e4b66;
+        --bodyTextColor: #847098;
         --bodyTextColorWhite: #fafbfc;
+        --strokeColor: #847098;
 
         /* Dark Mode Styles */
         --dark: #082032;
@@ -27,15 +29,15 @@
         --accent: #334756;
 
         /* 13px - 16px */
-        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+        --topperFontSize: clamp(1rem, 2vw, 2rem);
         /* 31px - 49px */
-        --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+        --headerFontSize: clamp(3rem, 5vw, 5rem);
         --bodyFontSize: 1rem;
         /* 60px - 100px top and bottom */
         --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 
-        --headerFont: "Roboto", Arial, sans-serif;
-        --bodyFont: "Roboto", Arial, sans-serif;
+        --headerFont: Overlock, Arial, sans-serif;
+        --bodyFont: Overlock, Arial, sans-serif;
     }
 
     html,
@@ -77,7 +79,7 @@
         text-align: inherit;
         max-width: 43.75rem;
         margin: 0 0 1rem 0;
-        color: var(--headerColor);
+        color: var(--primary);
         position: relative;
     }
 
@@ -276,6 +278,9 @@
             cursor: pointer;
         }
     }
+    body {
+        background-color: var(--background);
+    }
 
     body.dark-mode {
         background-color: var(--dark);
@@ -288,7 +293,7 @@
         h4,
         h5,
         h6 {
-            color: #fff;
+            color:var(--bodyTextColorWhite);
         }
     }
 }
@@ -296,34 +301,34 @@
 /* Fonts */
 @media only screen and (min-width: 0rem) {
     // Grab your fonts to locally host from https://gwfh.mranftl.com/fonts
-    /* roboto-regular - latin */
+    /* overlock-regular - latin */
     @font-face {
         font-style: normal;
-        font-family: "Roboto";
+        font-family: "Overlock";
         font-weight: 400;
         font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: local(""), url("/assets/fonts/Overlock/Overlock-Regular.woff2") format("woff2"),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/Overlock/Overlock-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 
-    /* roboto-700 - latin */
+    /* overlock-700 - latin */
     @font-face {
         font-style: normal;
-        font-family: "Roboto";
+        font-family: "Overlock";
         font-weight: 700;
         font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: local(""), url("/assets/fonts/Overlock/Overlock-Regular.woff2") format("woff2"),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/Overlock/Overlock-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 
-    /* roboto-900 - latin */
+    /* overlock-900 - latin */
     @font-face {
         font-style: normal;
-        font-family: "Roboto";
+        font-family: "Overlock";
         font-weight: 900;
         font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: local(""), url("/assets/fonts/Overlock/Overlock-Regular.woff2") format("woff2"),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/Overlock/Overlock-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
 }
 
@@ -810,7 +815,7 @@
             background-color: #fff;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
             opacity: 0;
-            border-bottom: 5px solid var(--primary);
+            border-bottom: 5px solid var(--primaryLight);
             visibility: hidden;
             /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the cs-drop-li so they don't have weird scattered animations */
             // columns: 2;
@@ -887,13 +892,13 @@
                 box-sizing: border-box;
                 padding: (12/16rem);
                 color: var(--bodyTextColor);
-                background-color: #f7f7f7;
+                background-color: var(--bodyTextColorWhite);
                 outline: none;
                 display: block;
-                transition: color 0.3s, background-color 0.3s;
+                transition: color 0.2s, background-color 0.5s;
 
                 &:hover {
-                    background-color: #f7f7f7;
+                    background-color: var(--secondary);
                 }
 
                 &:before {

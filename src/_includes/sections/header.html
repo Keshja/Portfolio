@@ -22,24 +22,24 @@
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                     <li class="cs-li">
-                        <a href="/" class="cs-li-link {% if page.url == "/" %} cs-active {% endif %}">
+                        <a href='/' class="cs-li-link {% if page.url == '/' %} cs-active {% endif %}">
                             Home
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/about/" class="cs-li-link {% if page.url == "/about/" %} cs-active {% endif %}">
+                        <a href="/about/" class="cs-li-link {% if page.url == '/about/' %} cs-active {% endif %}">
                             About
                         </a>
                     </li>
                     <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
                     <li class="cs-li cs-dropdown">
-                        <span class="cs-li-link {% if page.url == "/project-one/" or page.url == "/project-two/" %} cs-active {% endif %}">
+                        <span class="cs-li-link {% if page.url == '/bytes/' or page.url == '/project-two/' %} cs-active {% endif %}">
                             Projects
                             <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
                         </span>
                         <ul class="cs-drop-ul">
                             <li class="cs-drop-li">
-                                <a href="/project-one/" class="cs-li-link cs-drop-link">Project One</a>
+                                <a href="/bytes/" class="cs-li-link cs-drop-link">Bytes</a>
                             </li>
                             <li class="cs-drop-li">
                                 <a href="/project-two/" class="cs-li-link cs-drop-link">Project Two</a>
@@ -47,7 +47,7 @@
                         </ul>
                     </li>
                     <li class="cs-li cs-hide-on-desktop">
-                        <a href="/contact/" class="cs-li-link {% if page.url == "/contact/" %} cs-active {% endif %}">
+                        <a href="/contact/" class="cs-li-link {% if page.url == '/contact/' %} cs-active {% endif %}">
                             Contact
                         </a>
                     </li>

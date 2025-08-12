@@ -11,23 +11,13 @@
   #RPsbsr-313 .cs-container {
     width: 100%;
     max-width: 80rem;
+    height: max-content;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
-  }
-  #RPsbs-313 .cs-content,
-  #RPsbsr-313 .cs-content {
-    /* set text align to left if content needs to be left aligned */
-    text-align: left;
-    width: 100%;
-    max-width: 33.875rem;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: flex-start;
   }
   #RPsbs-313 .cs-text,
   #RPsbsr-313 .cs-text {
@@ -37,58 +27,14 @@
   #RPsbsr-313 .cs-text:last-of-type {
     margin-bottom: 2rem;
   }
-  #RPsbs-313 .cs-quote,
-  #RPsbsr-313 .cs-quote {
-    margin: 0 0 2rem 0;
-    /* 16px - 32px */
-    padding: clamp(1rem, 3vw, 2rem);
-    background-color: #f7f7f7;
-    border-radius: 1rem;
-    position: relative;
-  }
-  #RPsbs-313 .cs-quote-text,
-  #RPsbsr-313 .cs-quote-text {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5em;
-    margin: 0 0 1rem;
-    color: #767676;
-    display: block;
-  }
-  #RPsbs-313 .cs-name,
-  #RPsbsr-313 .cs-name {
-    font-size: 1rem;
-    line-height: 1.2em;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 0 0.25rem;
-    color: var(--headerColor);
-    display: block;
-  }
-  #RPsbs-313 .cs-job,
-  #RPsbsr-313 .cs-job {
-    font-size: 0.875rem;
-    line-height: 1.5em;
-    color: #767676;
-    display: block;
-  }
-  #RPsbs-313 .cs-quote-icon,
-  #RPsbsr-313 .cs-quote-icon {
-    /* 60px - 136px */
-    width: clamp(3.75rem, 10vw, 8.5rem);
-    height: auto;
-    position: absolute;
-    bottom: 0rem;
-    /* 16px - 32px */
-    right: clamp(1rem, 4vw, 2rem);
-  }
   #RPsbs-313 .cs-image-group,
   #RPsbsr-313 .cs-image-group {
     /* scaling the font size with the view width */
     font-size: min(2.31vw, .7em);
     /* using ems so we can use font size to scale the whole section */
     width: 39.4375em;
-    height: 39.75em;
+    height: 46.875em;
+    margin-bottom: 18.75em;
     position: relative;
   }
   #RPsbs-313 .cs-picture,
@@ -103,29 +49,69 @@
   #RPsbsr-313 .cs-picture img {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     height: 100%;
     width: 100%;
     /* makes image act like a background image */
     object-fit: cover;
   }
+  #RPsbs-313 .filter-purple,
+  #RPsbsr-313 .filter-purple {
+    position: absolute;
+    height: 28.125em;
+    color: var(--strokeColor);
+    right: 18%;
+    top: 9%;
+  }
+  #RPsbs-313 #back-curve,
+  #RPsbsr-313 #back-curve {
+    position: absolute;
+    right: 8%;
+    top: 30%;
+  }
+  #RPsbs-313 #back-curve-end,
+  #RPsbsr-313 #back-curve-end {
+    position: absolute;
+    right: 21%;
+    top: 82%;
+    rotate: -5deg;
+    height: 6.25em;
+  }
   #RPsbs-313 .cs-picture1,
   #RPsbsr-313 .cs-picture1 {
-    width: 32.625em;
-    height: 36.3125em;
-    left: 0;
+    width: 18.75em;
+    height: 30.625em;
+    right: 15%;
     top: 0;
+    border: clamp(0.375em, 1.5vw, 0.75em) dashed var(--strokeColor);
   }
   #RPsbs-313 .cs-picture2,
   #RPsbsr-313 .cs-picture2 {
-    width: 25.875em;
-    height: 25em;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
+    width: 16.875em;
+    height: 26.25em;
     /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid #ffffff;
-    right: 0;
-    bottom: 0;
+    right: 25%;
+    top: 5%;
+    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--strokeColor);
+  }
+  #RPsbs-313 .cs-about-card,
+  #RPsbsr-313 .cs-about-card {
+    position: absolute;
+    rotate: -10deg;
+    bottom: -24%;
+    right: 16%;
+    width: 25em;
+    height: 17.5em;
+    border-radius: 1.5em;
+    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--strokeColor);
+    padding: clamp(1rem, 3vw, 2rem);
+  }
+  #RPsbs-313 .cs-about-card .cs-text,
+  #RPsbsr-313 .cs-about-card .cs-text {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding-right: 2.1875rem;
   }
 }
 /* Desktop - 1024px */
@@ -133,8 +119,8 @@
   #RPsbs-313 .cs-container,
   #RPsbsr-313 .cs-container {
     flex-flow: row;
-    justify-content: space-between;
     gap: 3.25rem;
+    justify-content: center;
   }
   #RPsbs-313 .cs-image-group,
   #RPsbsr-313 .cs-image-group {
@@ -203,8 +189,8 @@
     right: 0;
   }
   #RPsbsr-313 .cs-picture2 {
-    right: auto;
-    left: 0;
+    left: auto;
+    right: 0;
   }
   #RPsbsr-313 .cs-quote {
     background-color: rgba(0, 0, 0, 0.05);

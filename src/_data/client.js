@@ -1,15 +1,15 @@
 module.exports = {
-    name: "Code Stitch Web Designs",
-    email: "help@codestitch.app",
-    phoneForTel: "555-779-4407",
-    phoneFormatted: "(555) 779-4407",
+    name: "Web Designs Portfolio",
+    email: "silanbaycu@gmail.com",
+    phoneForTel: "+49 1 63 797 0 393",
+    phoneFormatted: "(+49) 163 797 0 393",
     address: {
         lineOne: "First Address Line",
         lineTwo: "Second Address Line",
-        city: "Denver",
-        state: "CO",
-        zip: "80206",
-        country: "US",
+        city: "Köln",
+        state: "NRW",
+        zip: "51069",
+        country: "Germany",
         mapLink: "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6",
     },
     socials: {
