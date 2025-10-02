@@ -5,27 +5,28 @@
 @media only screen and (min-width: 0rem) {
   /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
   :root {
-    --primary: #ff6a3e;
-    --primaryLight: #ffba43;
-    --secondary: #ffba43;
-    --secondaryLight: #ffba43;
-    --headerColor: #1a1a1a;
-    --bodyTextColor: #4e4b66;
+    --background: #141315;
+    --primary: #847098;
+    --primaryLight: #c0b2ce;
+    --secondary: #c0b2ce;
+    --secondaryLight: #c0b2ce;
+    --headerColor: #141315;
+    --bodyTextColor: #847098;
     --bodyTextColorWhite: #fafbfc;
     --strokeColor: #847098;
     /* Dark Mode Styles */
-    --dark: #082032;
-    --medium: #2c394b;
+    --dark: #141315;
+    --medium: #462f5e;
     --accent: #334756;
     /* 13px - 16px */
-    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    --topperFontSize: clamp(1rem, 2vw, 2rem);
     /* 31px - 49px */
-    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --headerFontSize: clamp(3rem, 5vw, 5rem);
     --bodyFontSize: 1rem;
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-    --headerFont: "Roboto", Arial, sans-serif;
-    --bodyFont: "Roboto", Arial, sans-serif;
+    --headerFont: Overlock, Arial, sans-serif;
+    --bodyFont: Overlock, Arial, sans-serif;
   }
   html,
   body {
@@ -36,6 +37,21 @@
     font-size: 100%;
     transition: background-color 0.3s;
     color: var(--bodyTextColor);
+  }
+  #cursor {
+    display: block;
+    background-color: lavenderblush;
+    mix-blend-mode: difference;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    border-radius: 50%;
+    transform: translate(-100px, -100px);
+    pointer-events: none;
+    filter: blur(100);
   }
   *,
   *:before,
@@ -63,7 +79,7 @@
     text-align: inherit;
     max-width: 43.75rem;
     margin: 0 0 1rem 0;
-    color: var(--headerColor);
+    color: var(--primary);
     position: relative;
   }
   .cs-text {
@@ -224,6 +240,9 @@
   button:hover {
     cursor: pointer;
   }
+  body {
+    background-color: var(--background);
+  }
   body.dark-mode {
     background-color: var(--dark);
   }
@@ -235,38 +254,38 @@
   body.dark-mode h4,
   body.dark-mode h5,
   body.dark-mode h6 {
-    color: #fff;
+    color: var(--bodyTextColorWhite);
   }
 }
 /* Fonts */
 @media only screen and (min-width: 0rem) {
-  /* roboto-regular - latin */
+  /* overlock-regular - latin */
   @font-face {
     font-style: normal;
-    font-family: "Roboto";
+    font-family: "Overlock";
     font-weight: 400;
     font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff");
+    src: local(""), url("/assets/fonts/Overlock/Overlock-Regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/Overlock/Overlock-Regular.woff") format("woff");
     
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-  /* roboto-700 - latin */
+  /* overlock-700 - latin */
   @font-face {
     font-style: normal;
-    font-family: "Roboto";
+    font-family: "Overlock";
     font-weight: 700;
     font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff");
+    src: local(""), url("/assets/fonts/Overlock/Overlock-Regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/Overlock/Overlock-Regular.woff") format("woff");
     
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-  /* roboto-900 - latin */
+  /* overlock-900 - latin */
   @font-face {
     font-style: normal;
-    font-family: "Roboto";
+    font-family: "Overlock";
     font-weight: 900;
     font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff");
+    src: local(""), url("/assets/fonts/Overlock/Overlock-Regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/Overlock/Overlock-Regular.woff") format("woff");
     
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
@@ -399,8 +418,6 @@
     z-index: 10;
   }
   #cs-navigation .cs-logo img {
-    width: 100%;
-    height: 100%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
     /* places the image to the left edge of the parent */
@@ -580,7 +597,7 @@
     background-color: var(--medium);
   }
   body.dark-mode #cs-navigation .cs-li-link {
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColor);
   }
 }
 /*-- -------------------------- -->
@@ -589,7 +606,7 @@
 /* Mobile - 1023.5px */
 @media only screen and (max-width: 1023.5px) {
   #cs-navigation .cs-dropdown {
-    color: var(--bodyTextColorWhite);
+    color: var(--background);
     position: relative;
   }
   #cs-navigation .cs-dropdown.cs-active .cs-drop-ul {
@@ -676,7 +693,7 @@
     background-color: #fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
     opacity: 0;
-    border-bottom: 5px solid var(--primary);
+    border-bottom: 5px solid var(--primaryLight);
     visibility: hidden;
     /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the cs-drop-li so they don't have weird scattered animations */
     position: absolute;
@@ -748,13 +765,13 @@
     box-sizing: border-box;
     padding: 0.75rem;
     color: var(--bodyTextColor);
-    background-color: #f7f7f7;
+    background-color: var(--bodyTextColorWhite);
     outline: none;
     display: block;
-    transition: color 0.3s, background-color 0.3s;
+    transition: color 0.2s, background-color 0.5s;
   }
   #cs-navigation .cs-li-link.cs-drop-link:hover {
-    background-color: #f7f7f7;
+    background-color: var(--secondary);
   }
   #cs-navigation .cs-li-link.cs-drop-link:before {
     display: none;
@@ -904,12 +921,11 @@
   }
   #banner-310 .cs-int-title {
     /* 39px - 49px */
-    font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
+    font-size: clamp(4rem, 5vw, 8rem);
     font-weight: 900;
     line-height: 1.2em;
     text-align: center;
     max-width: 43.75rem;
-    margin: 0 auto 0.75rem;
     color: var(--bodyTextColorWhite);
     position: relative;
   }
@@ -920,7 +936,7 @@
   }
   #banner-310 .cs-link {
     /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-size: clamp(0.875rem, 1.5vw, 2rem);
     line-height: 1.2em;
     text-decoration: none;
     color: var(--bodyTextColorWhite);
@@ -1036,19 +1052,15 @@
     display: block;
     height: 100%;
     width: 100%;
+    opacity: 0.2;
     background: #000;
-    opacity: 0.8;
     top: 0;
     left: 0;
     z-index: 1;
-  }
-  #cta-51 .cs-picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    background-image: url("/assets/images/ovals.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 /*-- -------------------------- -->
@@ -1065,38 +1077,16 @@
   #cs-footer-275 .cs-container {
     width: 100%;
     /* reset on tablet */
-    max-width: 34.375rem;
     margin: auto;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    column-gap: 5.5rem;
-    row-gap: 2rem;
   }
   #cs-footer-275 .cs-logo-group {
     /* takes up all the space, lets the other ul's wrap below it */
     width: 100%;
     position: relative;
-  }
-  #cs-footer-275 .cs-logo {
-    /* 210px - 240px */
-    width: clamp(13.125rem, 8vw, 15rem);
-    height: auto;
-    display: block;
-    /* 28px - 44px */
-    margin-bottom: clamp(1.75rem, 4.17vw, 2.75rem);
-  }
-  #cs-footer-275 .cs-logo-img {
-    width: 100%;
-    height: auto;
-  }
-  #cs-footer-275 .cs-logo-img.dark {
-    display: none;
-  }
-  #cs-footer-275 .cs-text {
-    color: var(--bodyTextColorWhite);
-    margin-bottom: 1rem;
   }
   #cs-footer-275 .cs-social {
     display: inline-flex;
@@ -1113,6 +1103,7 @@
     background-color: #4e4b66;
     border-radius: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -1128,56 +1119,18 @@
     width: auto;
     display: block;
   }
-  #cs-footer-275 .cs-nav {
-    padding: 0;
-    margin: 0;
-  }
-  #cs-footer-275 .cs-nav-li {
-    list-style: none;
-    margin-bottom: 1rem;
-  }
-  #cs-footer-275 .cs-nav-li:last-of-type {
-    margin-bottom: 0;
-  }
   #cs-footer-275 .cs-header {
-    font-size: 1rem;
-    line-height: 1.5em;
-    font-weight: 700;
+    font-size: 5rem;
     color: var(--bodyTextColorWhite);
     position: relative;
   }
   #cs-footer-275 .cs-header:after {
     content: "";
-    width: 2rem;
-    height: 0.25rem;
     margin: 1rem auto 1.5rem 0;
     background: var(--primary);
     opacity: 1;
     position: relative;
     display: block;
-  }
-  #cs-footer-275 .cs-nav-link {
-    font-size: 1rem;
-    text-decoration: none;
-    line-height: 1.5em;
-    color: var(--bodyTextColorWhite);
-    position: relative;
-  }
-  #cs-footer-275 .cs-nav-link:before {
-    /* underline */
-    content: "";
-    width: 0%;
-    height: 0.125rem;
-    background: var(--bodyTextColorWhite);
-    opacity: 1;
-    position: absolute;
-    display: block;
-    bottom: -0.125rem;
-    left: 0;
-    transition: width 0.3s;
-  }
-  #cs-footer-275 .cs-nav-link:hover:before {
-    width: 100%;
   }
   #cs-footer-275 .cs-contact {
     margin: 0;
@@ -1209,10 +1162,6 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #cs-footer-275 .cs-container {
-    max-width: 80rem;
-    row-gap: 0;
-  }
   #cs-footer-275 .cs-contact {
     flex-direction: row;
     justify-content: space-between;
@@ -1224,19 +1173,11 @@
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #cs-footer-275 .cs-container {
-    /* pushes all flex children to the top */
-    align-items: flex-start;
-    justify-content: flex-end;
-  }
   #cs-footer-275 .cs-logo-group {
     /* pushes everything to the right of it as far as possible in a flexbox */
     margin-right: auto;
     width: auto;
     max-width: 19.0625rem;
-  }
-  #cs-footer-275 .cs-text {
-    width: 100%;
   }
   #cs-footer-275 .cs-social {
     flex-direction: row;

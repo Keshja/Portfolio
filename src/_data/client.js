@@ -1,21 +1,8 @@
 module.exports = {
-    name: "Web Designs Portfolio",
+    name: "Web Design Portfolio",
     email: "silanbaycu@gmail.com",
     phoneForTel: "+49 1 63 797 0 393",
     phoneFormatted: "(+49) 163 797 0 393",
-    address: {
-        lineOne: "First Address Line",
-        lineTwo: "Second Address Line",
-        city: "Köln",
-        state: "NRW",
-        zip: "51069",
-        country: "Germany",
-        mapLink: "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6",
-    },
-    socials: {
-        facebook: "https://www.facebook.com/",
-        instagram: "https://www.instagram.com/",
-    },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
     domain: "https://www.example.com",
     // Passing the isProduction variable for use in HTML templates

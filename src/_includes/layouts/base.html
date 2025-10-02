@@ -45,12 +45,19 @@
     <body>
         <!--Screen reader skip main nav-->
         <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
-
+        <div id="cursor"></div>
         {% include "sections/header.html" %}
         <main id="main">
             {% block body %}{% endblock %}
         </main>
         {% include "sections/footer.html" %}
+        <script>
+            const cursor = document.getElementById("cursor");
 
+            document.addEventListener("mousemove", (event) => {
+            cursor.setAttribute("style", "left: " + (event.pageX+80) + "px; top: " + (event.pageY+80) + "px;");
+            console.log(event);
+            });
+        </script>
     </body>
 </html>

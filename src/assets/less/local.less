@@ -30,9 +30,9 @@
 
         .cs-content {
             /* set text align to left if content needs to be left aligned */
+            display: flex;
             text-align: center;
             width: 100%;
-            display: flex;
             flex-direction: column;
             gap: clamp(0.5rem, 2vw, 1.25rem);
             /* centers content horizontally, set to flex-start to left align */
@@ -49,9 +49,9 @@
                 content: '';
                 position: absolute;
                 top: 50%;
-                left: 0;
+                left: 25%;
                 border-top: 3px solid var(--primary);
-                width: 100%;
+                width: 50%;
                 z-index: 1;
                 transform: translateY(-50%);
                 }
@@ -67,11 +67,11 @@
                 color: var(--primary);
                 padding: clamp(0.5rem, 2vw, 1.25rem);
                 font-size: var(--bodyFontSize);
-
+                cursor: none;
                 z-index: 2;
                 border-radius: 16rem;
                 border: var(--primary) 3px solid;
-                width: calc(100% / 5);
+                width: clamp(6rem, 20vw,calc(100% / 5) ) ;
             }
 
             .filter-button.active {
@@ -89,46 +89,44 @@
 
         .picture-group {
             /* used rem so it doesn't scale with the font size of on parent */
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr;
             font-size: ~"min(1.1vw, 1em)";
+            justify-items: center;
+            height: 100%;
             width: 100%;
-            height: max-content;
             padding: 0;
             margin: 0;
-            
-            /* 8px - 20px */
-            gap: clamp(0.5rem, 2vw, 1.25rem);
         }
 
-
         .cs-picture {
-            width: clamp(12rem, 20vw, 20rem);
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            height: auto;
             position: relative;
+            background-color: var(--background);
             display: block;
             border-radius: (8/16rem);
             overflow: hidden;
 
             img {
+                background-color: transparent;
                 position: relative;
-                scale: 1.1;
-                height: clamp(15rem, 25vw, 20rem);
+                border-radius: (8/16rem);
+                padding: 0;
+                margin: 0;
+                scale: 0.9;
+                height: 100%;
                 width: 100%;
-                object-fit: cover;
                 transition: scale 0.3s ease-in-out;
 
                 &:hover {
-                    scale: 1.2;
+                    scale: 1.1;
+                    border-radius: (8/16rem);
                 }
-                
             }
-
-            
         }
-
-        
     }
 }
 
@@ -136,15 +134,12 @@
 @media only screen and (min-width: 55rem) {
     #gallery-48 {
         .cs-content {
-        flex-direction: row;
         gap: clamp(0.5rem, 2vw, 1.25rem);
         }
-        
+
         .picture-group {
-            height: clamp(20rem, 25vw, 30rem);
-        }
-        .cs-picture-2 {
-            align-self: flex-end;
+            grid-template-columns: repeat(2, 1fr);
+            font-size: ~"min(1.1vw, 1em)";
         }
     }   
     
@@ -153,6 +148,10 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #gallery-48 {
+
+        .filter-button {
+            width: calc(100% / 10);
+        }
         
     }   
 }   
@@ -366,8 +365,6 @@
                 color: var(--primaryLight);
             }
 
-            
-            
 
             .cs-name {
                 color: var(--bodyTextColorWhite);

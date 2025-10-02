@@ -1,0 +1,107 @@
+---
+title: "Symbiose | Lernplattform"
+description: "Logo design für die Firma Symbiose"
+permalink: "/symbiose/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/projects.css">
+    <link rel="stylesheet" href="/assets/css/style_guide.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <span class="cs-int-title">Symbiose</span>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/project-two/" class="cs-link cs-active">Symbiose</a>
+            </div>
+        </div>
+        <!--Background Image-->
+
+        <picture class="cs-background">
+            <img src="{% getUrl '/assets/images/rectangles.jpg' | resize({ width: 1920, height: 1080 }) %}" alt="hero" width="100%" height="auto" loading="eager" decoding="async">
+        </picture>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                   Content                     -->
+    <!-- ============================================ -->
+
+<!--     <div class="container">
+        <h1 class="title">CSS-Only - Flipping Book</h1>
+        <h3>Click on pages to flip</h3>
+        <div class="book">
+            <input type="checkbox" name="page1" id="page1">
+            <input type="checkbox" name="page2" id="page2">
+            <input type="checkbox" name="page3" id="page3">
+            <input type="checkbox" name="page4" id="page4">
+            <div class="pages">
+                <div class="page1">
+                    <label for="page1"></label>
+                </div>
+                <div class="page2">
+                    <label for="page2"></label>
+                </div>
+                <div class="page3">
+                    <label for="page3"></label>
+                </div>
+                <div class="page4">
+                    <label for="page4"></label>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <section class="box" id="description">
+        <div class="text-box">
+            <div class="content">
+                <div class="title">
+                    <span class="cs-int-title des">Beschreibung </span>
+                    
+                </div>
+                <span class="cs-int-title des cs-line">Logo Design</span>
+                <p class="cs-text">
+                    Das Ziel dieses Projekts ist es, ein Logo für eine fiktive Firma namens „Symbiose“ zu erstellen. 
+                    Dieses Design zeigt Struktur und Interaktivität und richtet sich an die jüngere Zielgruppe des Unternehmens. 
+                    Das Farbkonzept verwendet die häufig mit Wissenschaft und Natur assoziierten Farben Kobaltblau und Grasgrün. 
+            </div>
+        </div>
+    </section>
+
+    <section class="box" id="pictures">
+       
+        <div class="cs-picture-group">
+            <picture class="cs-picture cs-picture-1">
+                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/symbiose/symbiose_logo_desc.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/symbiose/symbiose_logo_desc.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/portfolio/symbiose/symbiose_logo_desc.jpg" alt="Symbiose Logo Cube" width="1920" height="1080">
+            </picture>
+            <picture class="cs-picture cs-picture-2">
+                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/symbiose/symbiose_app_and_logo.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/symbiose/symbiose_app_and_logo.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/portfolio/symbiose/symbiose_app_and_logo.jpg" alt="Symbiose App" width="1920" height="1080">
+            </picture>
+            <picture class="cs-picture cs-picture-1">
+                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/symbiose/symbiose_name_desc.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/symbiose/symbiose_name_desc.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/portfolio/symbiose/symbiose_name_desc.jpg" alt="Symbiose Name" width="1920" height="1080">
+            </picture>
+            <picture class="cs-picture cs-picture-1">
+                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/symbiose/school_supplies.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/symbiose/school_supplies.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/portfolio/symbiose/school_supplies.jpg" alt="Symbiose Supplies" width="1920" height="1080">
+            </picture>
+        </div>
+    </section>
+
+{% endblock %}

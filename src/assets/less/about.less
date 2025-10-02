@@ -9,14 +9,15 @@
 <---       Side By Side         -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #RPsbs-313 {
+    #RPsbs-313,
+    #RPsbsr-313 {
         padding: var(--sectionPadding);
 
         .cs-container {
             width: 100%;
             max-width: (1280/16rem);
+            height: max-content;
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -25,15 +26,35 @@
             gap: clamp(3rem, 6vw, 4rem);
         }
 
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: left;
+        .titlebox {
             width: 100%;
-            max-width: (542/16rem);
             display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
+            flex-direction: row;
+            align-items: center;
+            gap: clamp(0.5rem, 2vw, 1.25rem);
+        }
+        #Filter {
+                width: 100%;
+                text-align: center;
+                margin: 20px;
+                position: relative;
+        }
+
+        #Filter:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            border-top: 3px solid var(--primary);
+            width: 100%;
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+        .cs-title {
+            text-transform: uppercase;
+            margin: 0;
+            text-wrap: nowrap;
+            max-width: 20ch;
         }
 
         .cs-text {
@@ -43,57 +64,14 @@
             }
         }
 
-        .cs-quote {
-            margin: 0 0 (32/16rem) 0;
-            /* 16px - 32px */
-            padding: clamp(1rem, 3vw, 2rem);
-            background-color: #f7f7f7;
-            border-radius: (16/16rem);
-            position: relative;
-        }
-
-        .cs-quote-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            margin: 0 0 (16/16rem);
-            color: #767676;
-            display: block;
-        }
-
-        .cs-name {
-            font-size: (16/16rem);
-            line-height: 1.2em;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin: 0 0 (4/16rem);
-            color: var(--headerColor);
-            display: block;
-        }
-
-        .cs-job {
-            font-size: (14/16rem);
-            line-height: 1.5em;
-            color: #767676;
-            display: block;
-        }
-
-        .cs-quote-icon {
-            /* 60px - 136px */
-            width: clamp(3.75rem, 10vw, 8.5rem);
-            height: auto;
-            position: absolute;
-            bottom: (0/16rem);
-            /* 16px - 32px */
-            right: clamp(1rem, 4vw, 2rem);
-        }
 
         .cs-image-group {
             /* scaling the font size with the view width */
             font-size: ~"min(2.31vw, .7em)";
             /* using ems so we can use font size to scale the whole section */
             width: (631/16em);
-            height: (636/16em);
+            height: (750/16em);
+            margin-bottom: (300/16em);
             position: relative;
         }
 
@@ -103,11 +81,12 @@
             overflow: hidden;
             position: absolute;
             display: block;
+            
 
             img {
                 position: absolute;
                 top: 0;
-                left: 0;
+                right: 0;
                 height: 100%;
                 width: 100%;
                 /* makes image act like a background image */
@@ -115,36 +94,81 @@
             }
         }
 
+        .filter-purple {
+            position: absolute;
+            height: (450/16em);
+            color: var(--strokeColor);
+            right: 18%;
+            top: 9%;
+        }
+
+        #back-curve {
+            position: absolute;
+            right: 8%;
+            top: 30%
+        }
+
+        #back-curve-end {
+            position: absolute;
+            right: 23%;
+            top: 84%;
+            rotate: -5deg;
+            height: (80/16em);
+        }
+
         .cs-picture1 {
-            width: (522/16em);
-            height: (581/16em);
-            left: 0;
+            width: (300/16em);
+            height: (490/16em);
+            right: 15%;
             top: 0;
+            border: clamp(0.375em, 1.5vw, 0.75em) dashed var(--strokeColor);
         }
 
         .cs-picture2 {
-            width: (414/16em);
-            height: (400/16em);
-            background-color: #fff;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
+            width: (270/16em);
+            height: (420/16em);
             /* 6px - 12px */
-            border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-            right: 0;
-            bottom: 0;
+            right: 25%;
+            top: 5%;
+            border: clamp(0.375em, 1.5vw, 0.75em) solid var(--strokeColor);
+        }
+
+        .cs-about-card {
+            
+            position: absolute;
+            background-color: var(--background);
+            transform-origin: right top;
+            rotate: -10deg;
+            bottom: -20%;
+            right: 22%;
+            width: (400/16em);
+            height: (280/16em);
+            border-radius: (24/16em);
+            border: clamp(0.375em, 1.5vw, 0.75em) solid var(--strokeColor);
+            padding: clamp(1rem, 3vw, 2rem);
+
+            .cs-text {
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                padding-right: (35/16rem);
+            }
         }
     }
 }
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #RPsbs-313 {
+    #RPsbs-313,
+    #RPsbsr-313 {
         .cs-container {
             flex-flow: row;
-            justify-content: space-between;
             gap: (52/16rem);
+            justify-content: center;
         }
 
         .cs-image-group {
+
             font-size: ~"min(1.2vw, 1em)";
             flex: none;
         }
@@ -158,7 +182,8 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #RPsbs-313 {
+        #RPsbs-313,
+        #RPsbsr-313 {
             .cs-image-group {
                 &:before,
                 &:after {
@@ -176,10 +201,9 @@
                 color: var(--primaryLight);
             }
 
-            .cs-title,
-            .cs-text,
-            .cs-h3,
-            .cs-quote-text,
+            
+            
+
             .cs-name {
                 color: var(--bodyTextColorWhite);
             }

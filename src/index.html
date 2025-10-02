@@ -28,6 +28,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 {% endblock %}
 
 {% block body %}
+        
 
     <!-- ============================================ -->
     <!--                    Hero                      -->
@@ -38,70 +39,16 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <span class="cs-topper">design code deploy</span>
             <h1 class="cs-title">Silan Baycu</h1>
             <p class="cs-text">
-                Aspiring Web Designer & Developer.
+                Web Developer & Graphic Designer.
             </p>
         </div>
 
         <!-- Background Image -->
         <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 640, height: 1490 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 640, height: 1490 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 640, height: 1490 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Large Tablet Image-->
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1300px)" srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1300px)" srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1300px)" srcset="{% getUrl '/assets/images/landing.jpg' | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl '/assets/images/landing.jpg' | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
+            <img src="{% getUrl '/assets/images/rectangles.jpg' | resize({ width: 1920, height: 1080 }) %}" alt="hero" width="100%" height="auto" loading="eager" decoding="async">
         </picture>
     </section>
 
-    <!-- ============================================ -->
-    <!--                   Services                   -->
-    <!-- ============================================ -->
-
-    <section id="h-services-143">
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-            </li>
-        </ul>
-    </section>
 
     <!-- ============================================ -->
     <!--                   Gallery                    -->
@@ -112,11 +59,10 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <div class="cs-content titlebox">
                 <h2 class="cs-title">Portfolio</h2>
                 <div id = "Filter">
-                    <div class="button-group">  
-                        <button class="filter-button active" onclick="filter('all')">All</button>
-                        <button class="filter-button" onclick="filter('logos')">Logos</button>
-                        <button class="filter-button" onclick="filter('websites')">Websites</button>
-                        <button class="filter-button" onclick="filter('flyers')">Flyers</button>
+                    <div class="button-group">
+                        <button class="filter-button active">Logos</button>
+                        <button class="filter-button">Websites</button>
+                        <button class="filter-button">Flyers</button>
                     </div>
                 </div>
             </div>
@@ -125,154 +71,73 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <!--Bytes-->
                 <picture class="cs-picture cs-picture-1 portfolio-item">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 182, height: 250 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 182, height: 250 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 182, height: 250 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/bytes/products/bytes_blue_headphones.jpg' | resize({ width: auto, height: 182 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/bytes/products/bytes_blue_headphones.jpg' | resize({ width: auto, height: 182 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/bytes/products/bytes_blue_headphones.jpg' | resize({ width: auto, height: 182 }) | jpeg %}" type="image/jpeg">
                     <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 634, height: 798 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 634, height: 798 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 634, height: 798 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/bytes/products/bytes_blue_headphones.jpg' | resize({ width: auto, height: 634 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/bytes/products/bytes_blue_headphones.jpg' | resize({ width: auto, height: 634 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/bytes/products/bytes_blue_headphones.jpg' | resize({ width: auto, height: 634 }) | jpeg %}" type="image/jpeg">
                     <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 826, height: 1134 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 826, height: 1134 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 826, height: 1134 }) | jpeg %}" type="image/jpeg">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/bytes/products/bytes_blue_headphones.jpg' | resize({ width: auto, height: 826 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/bytes/products/bytes_blue_headphones.jpg' | resize({ width: auto, height: 826 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/bytes/products/bytes_blue_headphones.jpg' | resize({ width: auto, height: 826 }) | jpeg %}" type="image/jpeg">
                     <a id ="portfolio-link" href="/bytes/">
-                        <img src="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 826, height: 1134 }) | jpeg %}" alt="Bytes Shark Logo" width="413" height="567" loading="lazy" decoding="async">
+                        <img src="{% getUrl '/assets/images/portfolio/bytes/products/bytes_blue_headphones.jpg' | resize({ width: auto, height: 1134 }) | jpeg %}" alt="Bytes Shark Logo" width="auto" height="500" loading="lazy" decoding="async">
                     </a>
                 </picture>
 
                 <!-- Image 2-->
                 <picture class="cs-picture cs-picture-2 portfolio-item">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 182, height: 276 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 182, height: 276 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 182, height: 276 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/symbiose/symbiose_app.jpg' | resize({ width: auto, height: 182 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/symbiose/symbiose_app.jpg' | resize({ width: auto, height: 182 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/symbiose/symbiose_app.jpg' | resize({ width: auto, height: 182 }) | jpeg %}" type="image/jpeg">
                     <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 634, height: 886 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 634, height: 886 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 634, height: 886 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/symbiose/symbiose_app.jpg' | resize({ width: auto, height: 634 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/symbiose/symbiose_app.jpg' | resize({ width: auto, height: 634 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/symbiose/symbiose_app.jpg' | resize({ width: auto, height: 634 }) | jpeg %}" type="image/jpeg">
                     <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 826, height: 1258 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 826, height: 1258 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 826, height: 1258 }) | jpeg %}" type="image/jpeg">
-                    <a id ="portfolio-link" href="/bytes/">
-                        <img src="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 826, height: 1258 }) | jpeg %}" alt="new home construction" width="413" height="629" loading="lazy" decoding="async">
-                    </a>
+                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/symbiose/symbiose_app.jpg' | resize({ width: auto, height: 826 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/symbiose/symbiose_app.jpg' | resize({ width: auto, height: 826 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/symbiose/symbiose_app.jpg' | resize({ width: auto, height: 826 }) | jpeg %}" type="image/jpeg">
+                    <a id ="portfolio-link" href="/symbiose/">
+                        <img src="{% getUrl '/assets/images/portfolio/symbiose/symbiose_app.jpg' | resize({ width: auto, height: 1258 }) | jpeg %}" alt="new home construction" width="auto" height="500" loading="lazy" decoding="async">
+                    </a>symbiose_app
                 </picture>
 
                 <!-- Image 3-->
                 <picture class="cs-picture cs-picture-1 portfolio-item">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 182, height: 226 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 182, height: 226 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 182, height: 226 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 634, height: 720 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 634, height: 720 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 634, height: 720 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 826, height: 1024 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 826, height: 1024 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 826, height: 1024 }) | jpeg %}" type="image/jpeg">
-                    <a id ="portfolio-link" href="/bytes/">
-                        <img src="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 826, height: 1024 }) | jpeg %}" alt="building a new wall" width="413" height="512" loading="lazy" decoding="async">
-                    </a>
+                    <img src="/assets/images/giphy.gif" alt="building a new wall" width="auto" height="1258" loading="lazy" decoding="async">
+
                 </picture>
 
-                <picture class="cs-picture cs-picture-2 portfolio-item">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 182, height: 226 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 182, height: 226 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 182, height: 226 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 634, height: 720 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 634, height: 720 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 634, height: 720 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 826, height: 1024 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 826, height: 1024 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 826, height: 1024 }) | jpeg %}" type="image/jpeg">
-                    <a id ="portfolio-link" href="/bytes/">
-                        <img src="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 826, height: 1024 }) | jpeg %}" alt="building a new wall" width="413" height="512" loading="lazy" decoding="async">
-                    </a>
+                <picture class="cs-picture cs-picture-1 portfolio-item">
+                    <img src="/assets/images/giphy.gif" alt="building a new wall" width="auto" height="1258" loading="lazy" decoding="async">
+
                 </picture>
                 <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
             </div>
             <div class="picture-group" id = "websites">
 
-                <!--Bytes-->
                 <picture class="cs-picture cs-picture-1 portfolio-item">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 182, height: 250 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 182, height: 250 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 182, height: 250 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 634, height: 798 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 634, height: 798 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 634, height: 798 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 826, height: 1134 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 826, height: 1134 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 826, height: 1134 }) | jpeg %}" type="image/jpeg">
-                    <a id ="portfolio-link" href="/bytes/">
-                        <img src="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 826, height: 1134 }) | jpeg %}" alt="Bytes Shark Logo" width="413" height="567" loading="lazy" decoding="async">
-                    </a>
+                    <img src="/assets/images/giphy.gif" alt="building a new wall" width="auto" height="1258" loading="lazy" decoding="async">
+
                 </picture>
 
-                <!-- Image 2-->
-                <picture class="cs-picture cs-picture-2 portfolio-item">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 182, height: 276 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 182, height: 276 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 182, height: 276 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 634, height: 886 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 634, height: 886 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 634, height: 886 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 826, height: 1258 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 826, height: 1258 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 826, height: 1258 }) | jpeg %}" type="image/jpeg">
-                    <a id ="portfolio-link" href="/bytes/">
-                        <img src="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 826, height: 1258 }) | jpeg %}" alt="new home construction" width="413" height="629" loading="lazy" decoding="async">
-                    </a>
-                </picture>
-
-                <!-- Image 3-->
                 <picture class="cs-picture cs-picture-1 portfolio-item">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 182, height: 226 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 182, height: 226 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 182, height: 226 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 634, height: 720 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 634, height: 720 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 634, height: 720 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 826, height: 1024 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 826, height: 1024 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 826, height: 1024 }) | jpeg %}" type="image/jpeg">
-                    <a id ="portfolio-link" href="/bytes/">
-                        <img src="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 826, height: 1024 }) | jpeg %}" alt="building a new wall" width="413" height="512" loading="lazy" decoding="async">
-                    </a>
+                    <img src="/assets/images/giphy.gif" alt="building a new wall" width="auto" height="1258" loading="lazy" decoding="async">
+
                 </picture>
 
-                <picture class="cs-picture cs-picture-2 portfolio-item">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 182, height: 226 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 182, height: 226 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 182, height: 226 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 634, height: 720 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 634, height: 720 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 634, height: 720 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 826, height: 1024 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 826, height: 1024 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 826, height: 1024 }) | jpeg %}" type="image/jpeg">
-                    <a id ="portfolio-link" href="/bytes/">
-                        <img src="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 826, height: 1024 }) | jpeg %}" alt="building a new wall" width="413" height="512" loading="lazy" decoding="async">
-                    </a>
+                <picture class="cs-picture cs-picture-1 portfolio-item">
+                    <img src="/assets/images/giphy.gif" alt="building a new wall" width="auto" height="1258" loading="lazy" decoding="async">
+
+                </picture>
+
+               <picture class="cs-picture cs-picture-1 portfolio-item">
+                    <img src="/assets/images/giphy.gif" alt="building a new wall" width="auto" height="1258" loading="lazy" decoding="async">
+
                 </picture>
                 <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
             </div>
@@ -281,210 +146,38 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <!--Bytes-->
                 <picture class="cs-picture cs-picture-1 portfolio-item">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 182, height: 250 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 182, height: 250 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 182, height: 250 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/flyers/MacBeth.jpg' | resize({ width: auto, height: 250 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/flyers/MacBeth.jpg' | resize({ width: auto, height: 250 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/flyers/MacBeth.jpg' | resize({ width: auto, height: 250 }) | jpeg %}" type="image/jpeg">
                     <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 634, height: 798 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 634, height: 798 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 634, height: 798 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/flyers/MacBeth.jpg' | resize({ width: auto, height: 798 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/flyers/MacBeth.jpg' | resize({ width: auto, height: 798 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/flyers/MacBeth.jpg' | resize({ width: auto, height: 798 }) | jpeg %}" type="image/jpeg">
                     <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 826, height: 1134 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 826, height: 1134 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 826, height: 1134 }) | jpeg %}" type="image/jpeg">
-                    <a id ="portfolio-link" href="/bytes/">
-                        <img src="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 826, height: 1134 }) | jpeg %}" alt="Bytes Shark Logo" width="413" height="567" loading="lazy" decoding="async">
-                    </a>
+                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/flyers/MacBeth.jpg' | resize({ width: auto, height: 1134 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/flyers/MacBeth.jpg' | resize({ width: auto, height: 1134 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/flyers/MacBeth.jpg' | resize({ width: auto, height: 1134 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl '/assets/images/portfolio/flyers/MacBeth.jpg' | resize({ width: auto, height: 1134 }) | jpeg %}" alt="Bytes Shark Logo" width="413" height="567" loading="lazy" decoding="async">
                 </picture>
 
                 <!-- Image 2-->
-                <picture class="cs-picture cs-picture-2 portfolio-item">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 182, height: 276 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 182, height: 276 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 182, height: 276 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 634, height: 886 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 634, height: 886 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 634, height: 886 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 826, height: 1258 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 826, height: 1258 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 826, height: 1258 }) | jpeg %}" type="image/jpeg">
-                    <a id ="portfolio-link" href="/bytes/">
-                        <img src="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 826, height: 1258 }) | jpeg %}" alt="new home construction" width="413" height="629" loading="lazy" decoding="async">
-                    </a>
+               <picture class="cs-picture cs-picture-1 portfolio-item">
+                    <img src="/assets/images/giphy.gif" alt="building a new wall" width="auto" height="1258" loading="lazy" decoding="async">
+
                 </picture>
 
                 <!-- Image 3-->
                 <picture class="cs-picture cs-picture-1 portfolio-item">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 182, height: 226 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 182, height: 226 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 182, height: 226 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 634, height: 720 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 634, height: 720 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 634, height: 720 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 826, height: 1024 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 826, height: 1024 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 826, height: 1024 }) | jpeg %}" type="image/jpeg">
-                    <a id ="portfolio-link" href="/bytes/">
-                        <img src="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 826, height: 1024 }) | jpeg %}" alt="building a new wall" width="413" height="512" loading="lazy" decoding="async">
-                    </a>
+                    <img src="/assets/images/giphy.gif" alt="building a new wall" width="auto" height="1258" loading="lazy" decoding="async">
+
                 </picture>
 
-                <picture class="cs-picture cs-picture-2 portfolio-item">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 182, height: 226 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 182, height: 226 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 182, height: 226 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 634, height: 720 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 634, height: 720 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 634, height: 720 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 826, height: 1024 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 826, height: 1024 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 826, height: 1024 }) | jpeg %}" type="image/jpeg">
-                    <a id ="portfolio-link" href="/bytes/">
-                        <img src="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 826, height: 1024 }) | jpeg %}" alt="building a new wall" width="413" height="512" loading="lazy" decoding="async">
-                    </a>
+                <picture class="cs-picture cs-picture-1 portfolio-item">
+                    <img src="/assets/images/giphy.gif" alt="building a new wall" width="auto" height="1258" loading="lazy" decoding="async">
+
                 </picture>
                 <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
             </div>
         </div>
     </section>
-
-    <!-- ============================================ -->
-    <!--                 About Me                     -->
-    <!-- ============================================ -->
-
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <div class="cs-content titlebox">
-                <h2 class="cs-title">About Me</h2>
-                <div id = "Filter">
-
-                </div>
-            </div>
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                
-                <!--About Cards-->
-                <div class="cs-about-card" id="about-card-1">
-                    <p class="cs-text">
-                        hi!</br>
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                    </p>
-                </div>
-                <div class="cs-about-card" id="about-card-2">
-                    <p class="cs-text">
-                        Do you know?</br>
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                    </p>
-                </div>
-                <div class="cs-about-card" id="about-card-3">
-                    <p class="cs-text">
-                        Fazit!</br>
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                    </p>
-                </div>
-
-                <!--Back Curve-->
-                <svg
-                    class="filter-purple"
-                    id="back-curve"
-                    width="auto"
-                    viewBox="0 0 135.38968 300.67062"
-                    version="1.1"
-                    id="svg1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:svg="http://www.w3.org/2000/svg">
-                    <defs
-                        id="defs1" />
-                    <g
-                        id="layer1"
-                        transform="translate(-206.91793,-196.95938)">
-                        <path
-                        style="fill:none;stroke:currentColor;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round"
-                        d="M 260.80784,199.45937 C 315.99948,269.82871 395.8877,336.21613 281.71,409.69 c -140.73868,91.41115 -33.41443,30.59331 -29.62,85.44"
-                        id="path1" />
-                    </g>
-                </svg>
-
-                <!--Back Curve End-->
-                <svg
-                    class="filter-purple"
-                    id="back-curve-end"
-                    width="auto"
-                    viewBox="0 0 23.8064 23.618702"
-                    version="1.1"
-                    id="svg1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:svg="http://www.w3.org/2000/svg">
-                    <defs
-                        id="defs1" />
-                    <g
-                        id="layer1"
-                        transform="translate(-222.26559,-347.41659)">
-                        <rect
-                        style="fill:currentColor;fill-opacity:1;stroke:none;stroke-width:2.95455;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-                        id="rect2"
-                        width="12"
-                        height="12"
-                        x="-376.91245"
-                        y="-228.9821"
-                        rx="0"
-                        ry="0"
-                        transform="rotate(-154)" />
-                    </g>
-                </svg>
-                
-                <!--Stroke Background Image-->
-                <picture class="cs-picture cs-picture1" ></picture>
-                
-                <!--Profile Image-->
-                <picture class="cs-picture cs-picture2">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/profilepic.jpg' | resize({ width: 165, height: 248 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/profilepic.jpg' | resize({ width: 165, height: 248 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/profilepic.jpg' | resize({ width: 165, height: 248 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/profilepic.jpg' | resize({ width: 165, height: 248 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/profilepic.jpg' | resize({ width: 165, height: 248 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/profilepic.jpg' | resize({ width: 165, height: 248 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/profilepic.jpg' | resize({ width: 165, height: 248 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/profilepic.jpg' | resize({ width: 165, height: 248 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/profilepic.jpg' | resize({ width: 165, height: 248 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl '/assets/images/profilepic.jpg' | resize({ width: 165, height: 248 }) | jpeg %}" alt="gavel" width="165" height="248" loading="lazy" decoding="async">
-                </picture>
-
-                <!--Front Curve-->
-                <svg
-                    class="filter-purple"
-                    id="front-curve"
-                    width="auto"
-                    viewBox="0 0 228.01486 241.94237"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:svg="http://www.w3.org/2000/svg">
-                    <defs
-                        id="defs1" />
-                    <g id="layer1" transform="translate(-51.545128,-165.26384)">
-                        <path
-                        style="fill:none;stroke:currentcolor;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round"
-                        d="m 110.9,176.3 c -33.804874,-16.55749 -68.56265,-11.6172 -53.04,39.78 19.461616,64.74617 55.70495,124.67921 124.31,165.75 42.42857,25.52614 87.30115,31.46655 94.89,8.7"
-                        id="path1" />
-                    </g>
-                </svg>
-                
-            </div>
-    </section>
-
-
-
-    {% include 'sections/cta.html' %}
 {% endblock %}
